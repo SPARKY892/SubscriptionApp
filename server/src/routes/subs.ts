@@ -1,5 +1,6 @@
 import express from "express";
 import User from "../models/user";
+import Articles from "../models/article";
 import { checkAuth } from "../middleware/checkAuth";
 import { stripe } from "../utils/stripe";
 

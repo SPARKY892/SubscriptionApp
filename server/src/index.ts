@@ -1,6 +1,7 @@
 import express from "express";
 import authRoutes from "./routes/auth";
 import subsRoutes from "./routes/subs";
+import articlesRoutes from "./routes/articles";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
@@ -22,6 +23,7 @@ mongoose
     app.use(cors());
     app.use("/auth", authRoutes);
     app.use("/subs", subsRoutes);
+    app.use("/articles", articlesRoutes);
   })
   .catch((error) => {
     console.log({ error });
