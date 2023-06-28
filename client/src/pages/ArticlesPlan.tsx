@@ -50,6 +50,17 @@ const ArticlesPlan = () => {
     setPrices(response.data);
   };
 
+  const createSession = async (priceId: string) => {
+    const { data: response } = await axios.post(
+      "http://localhost:8080/subs/session",
+      {
+        priceId,
+      }
+    );
+
+    window.location.href = response.url;
+  };
+
   const backgroundColors: any = {
     Basic: "rgb(104, 219, 104",
     Standard: "rgb(185, 42, 23, 0.835)",
@@ -75,7 +86,11 @@ const ArticlesPlan = () => {
                 <Card.Title style={{ fontSize: "2rem" }}>
                   {price.nickname}
                 </Card.Title>
-                <Button variant="primary" className="mt-2">
+                <Button
+                  variant="primary"
+                  className="mt-2"
+                  onClick={() => createSession(price.id)}
+                >
                   Buy now
                 </Button>
               </Card.Body>
