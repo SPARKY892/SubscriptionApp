@@ -24,7 +24,7 @@ mongoose
 
     app.use(
       cors({
-        origin: ["https://subscription-app-js3q.onrender.com/"],
+        origin: ["subscription-app-wkw2.vercel.app"],
         methods: ["POST", "GET"],
         credentials: true,
       })
