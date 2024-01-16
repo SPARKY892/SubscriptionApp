@@ -7,6 +7,8 @@ import dotenv from "dotenv";
 import cors from "cors";
 import bodyParser = require("body-parser");
 
+const port = process.env.PORT || 8080;
+
 dotenv.config();
 
 mongoose
@@ -27,8 +29,8 @@ mongoose
       res.send("Server is running.");
     });
 
-    app.listen(8080, () => {
-      console.log("Now listening to port 8080");
+    app.listen(port, () => {
+      console.log(`Now listening to port ${port}`);
     });
 
     app.use(express.json());
