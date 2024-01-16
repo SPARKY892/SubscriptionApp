@@ -15,6 +15,10 @@ mongoose
 
     const app = express();
 
+    app.get("/", (req, res) => {
+      res.json("Hello");
+    });
+
     app.use("/", (req, res) => {
       res.send("Server is running.");
     });
