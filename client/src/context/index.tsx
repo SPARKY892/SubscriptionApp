@@ -37,7 +37,7 @@ const UserProvider = ({ children }: any) => {
 
   const fetchUser = async () => {
     const { data: response } = await axios.get(
-      "https://subscription-app-eight.vercel.app/auth/me"
+      "https://subscription-app-js3q.onrender.com/auth/me"
     );
 
     if (response.data && response.data.user) {
