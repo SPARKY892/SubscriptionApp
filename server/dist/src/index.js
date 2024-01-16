@@ -13,11 +13,11 @@ const cors_1 = __importDefault(require("cors"));
 const body_parser_1 = __importDefault(require("body-parser"));
 const port = process.env.PORT || 8080;
 dotenv_1.default.config();
+const app = (0, express_1.default)();
 mongoose_1.default
     .connect(process.env.MONGO_URI)
     .then(() => {
     console.log("Connected to DB!");
-    const app = (0, express_1.default)();
     app.use(body_parser_1.default.json());
     app.use(body_parser_1.default.urlencoded({ extended: false }));
     app.use(express_1.default.json());
@@ -42,4 +42,5 @@ mongoose_1.default
     console.log({ error });
     throw new Error(error);
 });
+exports.default = app;
 //# sourceMappingURL=index.js.map

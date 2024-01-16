@@ -11,12 +11,12 @@ const port = process.env.PORT || 8080;
 
 dotenv.config();
 
+const app = express();
+
 mongoose
   .connect(process.env.MONGO_URI as string)
   .then(() => {
     console.log("Connected to DB!");
-
-    const app = express();
 
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: false }));
