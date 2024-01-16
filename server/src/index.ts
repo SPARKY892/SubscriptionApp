@@ -5,6 +5,7 @@ import articlesRoutes from "./routes/articles";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
+import bodyParser = require("body-parser");
 
 dotenv.config();
 
@@ -14,6 +15,9 @@ mongoose
     console.log("Connected to DB!");
 
     const app = express();
+
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: false }));
 
     app.get("/", (req, res) => {
       res.json("Hello");
