@@ -20,7 +20,7 @@ const Articles = () => {
 
   const fetchArticles = async () => {
     const { data: response } = await axios.get(
-      "http://localhost:8080/articles"
+      "https://subscription-app-eight.vercel.app/articles"
     );
     setArticles(response);
   };

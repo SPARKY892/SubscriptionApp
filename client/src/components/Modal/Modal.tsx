@@ -32,7 +32,7 @@ const ModalComponent = ({ text, variant, isSignupFlow }: ModalProps) => {
     let response;
     if (isSignupFlow) {
       const { data: signupData } = await axios.post(
-        "http://localhost:8080/auth/signup",
+        "https://subscription-app-eight.vercel.app/auth/signup",
         {
           email,
           password,
@@ -41,7 +41,7 @@ const ModalComponent = ({ text, variant, isSignupFlow }: ModalProps) => {
       response = signupData;
     } else {
       const { data: loginData } = await axios.post(
-        "http://localhost:8080/auth/login",
+        "https://subscription-app-eight.vercel.app/auth/login",
         {
           email,
           password,

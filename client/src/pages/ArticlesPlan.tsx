@@ -45,14 +45,14 @@ const ArticlesPlan = () => {
 
   const fetchPrices = async () => {
     const { data: response } = await axios.get(
-      "http://localhost:8080/subs/prices"
+      "https://subscription-app-eight.vercel.app/subs/prices"
     );
     setPrices(response.data);
   };
 
   const createSession = async (priceId: string) => {
     const { data: response } = await axios.post(
-      "http://localhost:8080/subs/session",
+      "https://subscription-app-eight.vercel.app/subs/session",
       {
         priceId,
       }
