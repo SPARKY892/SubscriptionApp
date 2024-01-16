@@ -10,12 +10,15 @@ const articles_1 = __importDefault(require("./routes/articles"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const cors_1 = __importDefault(require("cors"));
+const bodyParser = require("body-parser");
 dotenv_1.default.config();
 mongoose_1.default
     .connect(process.env.MONGO_URI)
     .then(() => {
     console.log("Connected to DB!");
     const app = (0, express_1.default)();
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: false }));
     app.get("/", (req, res) => {
         res.json("Hello");
     });
