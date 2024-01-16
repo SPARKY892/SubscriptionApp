@@ -22,13 +22,7 @@ mongoose
     app.use(bodyParser.urlencoded({ extended: false }));
     app.use(express.json());
 
-    app.use(
-      cors({
-        origin: ["subscription-app-wkw2.vercel.app"],
-        methods: ["POST", "GET"],
-        credentials: true,
-      })
-    );
+    app.use(cors());
 
     // Define your routes
     app.use("/auth", authRoutes);
