@@ -6,9 +6,9 @@ var __importDefault =
   };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const auth_1 = __importDefault(require("./src/routes/auth"));
-const subs_1 = __importDefault(require("./src/routes/subs"));
-const articles_1 = __importDefault(require("./src/routes/articles"));
+const auth_1 = __importDefault(require("./routes/auth"));
+const subs_1 = __importDefault(require("./routes/subs"));
+const articles_1 = __importDefault(require("./routes/articles"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const cors_1 = __importDefault(require("cors"));
