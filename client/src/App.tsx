@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Portfolio from "./components/Portfolio/Portfolio";
 import Nav from "./components/Nav/Nav";
 import LandingPage from "./pages/LandingPage";
 import Articles from "./pages/Articles";
@@ -8,6 +9,7 @@ import ArticlesPlan from "./pages/ArticlesPlan";
 function App() {
   return (
     <BrowserRouter>
+      <Portfolio />
       <Nav />
       <Routes>
         <Route path="/" element={<LandingPage />} />

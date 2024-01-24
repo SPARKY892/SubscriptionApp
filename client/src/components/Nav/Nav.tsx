@@ -19,7 +19,7 @@ const Nav = () => {
     navigate("/");
   };
   return (
-    <Navbar>
+    <NavBarStyled>
       <NavItem>
         <Link to="/" className="nav-link">
           Home
@@ -32,8 +32,12 @@ const Nav = () => {
           </NavItem>
         </LeftNavContainer>
       )}
-    </Navbar>
+    </NavBarStyled>
   );
 };
+
+const NavBarStyled = styled(Navbar)`
+  margin: 0px 5px;
+`;
 
 export default Nav;

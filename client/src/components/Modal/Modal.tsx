@@ -11,10 +11,6 @@ interface ModalProps {
   isSignupFlow: boolean;
 }
 
-const ErrorMessage = styled.p`
-  color: red;
-`;
-
 const ModalComponent = ({ text, variant, isSignupFlow }: ModalProps) => {
   const [show, setShow] = useState(false);
   const [email, setEmail] = useState("");
@@ -117,6 +113,10 @@ const ModalComponent = ({ text, variant, isSignupFlow }: ModalProps) => {
     </React.Fragment>
   );
 };
+
+const ErrorMessage = styled.p`
+  color: red;
+`;
 
 const CustomInputGroup = styled(InputGroup)`
   margin-bottom: 3px;
